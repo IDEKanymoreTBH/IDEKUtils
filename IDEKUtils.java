@@ -1,5 +1,140 @@
 public class IDEKUtils {
-  public static void main(String[] args) {
-    //Nothing Here Yet :)
-  }
+    /**
+     * <h2>Overview:</h2>
+     * This Method Sorts An ArrayList Based On The Digits Of Pi.
+     * For Example, Any Threes Will Be First, Then Ones, As They Occur In The Constant.
+     * This Method Is Primarily Used For A Single Thing, But Can Be Applied To Basically Any
+     * ArrayList That Only Has Integers. Doubles Are Not Allowed, Neither Other Numbers.
+     * Remember, Pi Only Contains Numbers, Not Extra Decimal Points Or The Letter L.
+     * <h2>Functionality:</h2>
+     * When Thinking Of This, It Is Best To Remember These Numbers: 3.1415926535897. This
+     * Is A Version Of Pi With Every Single Base 10 Number Besides Zero. I Choose To Ignore Zero
+     * Because Of A Previous Rule Basically Making It Useless. Here, We Can See The Hierarchy Of
+     * Numbers: 3, 1, 4, 5, 9, 2, 6, 8, 7.
+     * <h2>Examples:</h2>
+     * The List [4, 2, 1, 5, 4, 3, 4, 9, 6] Will Become [3, 1, 4, 4, 4, 5, 9, 2, 6]. There Is Also
+     * A Version Of This Function That Eliminates Duplicate Nums. That Is {@code sortToPiLoss}.
+     * @param originalList The Original List Of Numbers, Unsorted.
+     * @return A List Of Numbers That Have Been Sorted.
+     * @see #sortToPiLoss
+     */
+    public ArrayList<Integer> sortToPi(ArrayList<Integer> originalList) {
+        ArrayList<Integer> tempList = new ArrayList<>();
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 3) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 1) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 4) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 5) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 9) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 2) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 6) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 8) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 7) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        return tempList;
+    }
+    /**
+     * <h2>Overview:</h2>
+     * This Function Acts Exactly Like The {@code sortToPi}, Only It Removes Any Duplicate Values From The
+     * Original. It Is Recommended To Read About How {@code sortToPi} Works Before This, Since This One
+     * Builds Off Of That One.
+     * <h2>Example:</h2>
+     * The List [6, 2, 8, 4, 4, 1, 9] Will Turn Into [1, 4, 9, 2, 6, 8], Removing The Duplicate 4. Pretty
+     * Self Explanatory.
+     * @param originalList The Original List In Its Unsorted Form
+     * @return The Sorted Version Of The List
+     * @see #sortToPi
+     */
+    public ArrayList<Integer> sortToPiLoss(ArrayList<Integer> originalList) {
+        ArrayList<Integer> tempList = new ArrayList<>();
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 3) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 1) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 4) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 5) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 9) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 2) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 6) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 8) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 7) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        return tempList;
+    }
 }
