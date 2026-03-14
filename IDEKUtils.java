@@ -8,9 +8,8 @@ public class IDEKUtils {
      * Remember, Pi Only Contains Numbers, Not Extra Decimal Points Or The Letter L.
      * <h2>Functionality:</h2>
      * When Thinking Of This, It Is Best To Remember These Numbers: 3.1415926535897. This
-     * Is A Version Of Pi With Every Single Base 10 Number Besides Zero. I Choose To Ignore Zero
-     * Because Of A Previous Rule Basically Making It Useless. Here, We Can See The Hierarchy Of
-     * Numbers: 3, 1, 4, 5, 9, 2, 6, 8, 7.
+     * Is A Version Of Pi With Every Single Base 10 Number Besides Zero Since It's Obviously Last. Here, We Can See The Hierarchy Of
+     * Numbers: 3, 1, 4, 5, 9, 2, 6, 8, 7, 0.
      * <h2>Examples:</h2>
      * The List [4, 2, 1, 5, 4, 3, 4, 9, 6] Will Become [3, 1, 4, 4, 4, 5, 9, 2, 6]. There Is Also
      * A Version Of This Function That Eliminates Duplicate Nums. That Is {@code sortToPiLoss}.
@@ -62,6 +61,11 @@ public class IDEKUtils {
         }
         for(int i = 0; i < originalList.size(); i++) {
             if(originalList.get(i) == 7) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
                 tempList.add(originalList.get(i));
             }
         }
@@ -135,6 +139,12 @@ public class IDEKUtils {
                 break;
             }
         }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
         return tempList;
     }
     /**
@@ -146,9 +156,8 @@ public class IDEKUtils {
      * Remember, E Only Contains Numbers, Not Extra Decimal Points Or The Letter L.
      * <h2>Functionality:</h2>
      * When Thinking Of This, It Is Best To Remember These Numbers: 2.71828182845904523536. This
-     * Is A Version Of E With Every Single Base 10 Number. I Choose To Ignore Zero
-     * Because Of A Previous Rule Basically Making It Useless. Here, We Can See The Hierarchy Of
-     * Numbers: 2, 7, 1, 8, 4, 5, 9, 3, 6.
+     * Is A Version Of E With Every Single Base 10 Number. Here, We Can See The Hierarchy Of
+     * Numbers: 2, 7, 1, 8, 4, 5, 9, 0, 3, 6.
      * <h2>Examples:</h2>
      * The List [4, 2, 1, 5, 4, 3, 4, 9, 6] Will Become [2, 1, 4, 4, 4, 5, 9, 3, 6]. There Is Also
      * A Version Of This Function That Eliminates Duplicate Nums. That Is {@code sortToELoss}.
@@ -190,6 +199,11 @@ public class IDEKUtils {
         }
         for(int i = 0; i < originalList.size(); i++) {
             if(originalList.get(i) == 9) {
+                tempList.add(originalList.get(i));
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
                 tempList.add(originalList.get(i));
             }
         }
@@ -257,6 +271,12 @@ public class IDEKUtils {
         }
         for(int i = 0; i < originalList.size(); i++) {
             if(originalList.get(i) == 9) {
+                tempList.add(originalList.get(i));
+                break;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
                 tempList.add(originalList.get(i));
                 break;
             }
@@ -346,6 +366,72 @@ public class IDEKUtils {
         && amountsOfNums[3] >= 3 && amountsOfNums[4] >= 3 && amountsOfNums[5] >= 4 
         && amountsOfNums[6] >= 1 && amountsOfNums[7] >= 3 && amountsOfNums[8] >= 5 
         && amountsOfNums[9] >= 1) {
+            return true;
+        }
+        return false;
+    }
+    /**
+     * This Method Is Almost The Same As {@code contains30OfE}, Only It Returns True If And Only If
+     * Number From The First 30 Digits Of E Is There AND In Their Exact Amounts. 
+     * @param originalList The Original List
+     * @return True If The Exact First 30 Digits Of E Are There
+     */
+    public static boolean contains30OfEX(ArrayList<Integer> originalList) {
+        int[] amountsOfNums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
+                amountsOfNums[0]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 1) {
+                amountsOfNums[1]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 2) {
+                amountsOfNums[2]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 3) {
+                amountsOfNums[3]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 4) {
+                amountsOfNums[4]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 5) {
+                amountsOfNums[5]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 6) {
+                amountsOfNums[6]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 7) {
+                amountsOfNums[7]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 8) {
+                amountsOfNums[8]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 9) {
+                amountsOfNums[9]++;
+            }
+        }
+        if(amountsOfNums[0] == 2 && amountsOfNums[1] == 3 && amountsOfNums[2] == 5 
+        && amountsOfNums[3] == 3 && amountsOfNums[4] == 3 && amountsOfNums[5] == 4 
+        && amountsOfNums[6] == 1 && amountsOfNums[7] == 3 && amountsOfNums[8] == 5 
+        && amountsOfNums[9] == 1) {
             return true;
         }
         return false;
