@@ -275,4 +275,78 @@ public class IDEKUtils {
         }
         return tempList;
     }
+    /**
+     * <h2>Overview:</h2>
+     * This Method Returns True If And Only If The List Contains Every Single One Of First 30 Digits
+     * Of E. Even If A List Contains More Than That, Such As An Extra 4, It Will Still Count. You Can
+     * Choose {@code contains30OfEX} If You Need That.
+     * <h2>Functionality:</h2>
+     * If Given The List [2, 5, 2, 7, 1, 3, 2, 7], It Will Return False. However, The List
+     * [2, 7, 1, 8, 2, 8, 1, 8, 2, 8, 4, 5, 9, 0, 4, 5, 2, 3, 5, 3, 6, 0, 2, 8, 7, 4, 7, 1, 3, 5] Will
+     * Return True Because Every Number From 2.71828182845904523536028747135 Is Here.
+     * <h2>Modification:</h2>
+     * This Function Can Be Modified To Fit Any Number Of Digits. Just Change The Numbers At The Bottom.
+     * @param originalList
+     * @return
+     */
+    public static boolean contains30OfE(ArrayList<Integer> originalList) {
+        int[] amountsOfNums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 0) {
+                amountsOfNums[0]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 1) {
+                amountsOfNums[1]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 2) {
+                amountsOfNums[2]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 3) {
+                amountsOfNums[3]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 4) {
+                amountsOfNums[4]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 5) {
+                amountsOfNums[5]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 6) {
+                amountsOfNums[6]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 7) {
+                amountsOfNums[7]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 8) {
+                amountsOfNums[8]++;
+            }
+        }
+        for(int i = 0; i < originalList.size(); i++) {
+            if(originalList.get(i) == 9) {
+                amountsOfNums[9]++;
+            }
+        }
+        if(amountsOfNums[0] >= 2 && amountsOfNums[1] >= 3 && amountsOfNums[2] >= 5 
+        && amountsOfNums[3] >= 3 && amountsOfNums[4] >= 3 && amountsOfNums[5] >= 4 
+        && amountsOfNums[6] >= 1 && amountsOfNums[7] >= 3 && amountsOfNums[8] >= 5 
+        && amountsOfNums[9] >= 1) {
+            return true;
+        }
+        return false;
+    }
 }
