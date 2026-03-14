@@ -286,8 +286,9 @@ public class IDEKUtils {
      * Return True Because Every Number From 2.71828182845904523536028747135 Is Here.
      * <h2>Modification:</h2>
      * This Function Can Be Modified To Fit Any Number Of Digits. Just Change The Numbers At The Bottom.
-     * @param originalList
-     * @return
+     * @param originalList The List To Check
+     * @return True If It Has All The Digits
+     * @see contains30OfEX
      */
     public static boolean contains30OfE(ArrayList<Integer> originalList) {
         int[] amountsOfNums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
